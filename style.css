@@ -1,0 +1,441 @@
+/* --- Resets & Estilos Globais --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configura o comportamento de rolagem nativo para ser suave */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* --- CORES PRINCIPAIS --- */
+    background-color: #050a14; /* Azul profundo e escuro (Muito Escuro!) */
+    color: #e6f0ff;          /* Texto muito claro para contraste */
+    line-height: 1.6;
+    overflow-x: hidden;      /* Evita barra de rolagem horizontal indesejada */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Variáveis para consistência */
+:root {
+    --blue-highlight: #007bff; /* Azul vibrante para elementos ativos */
+    --blue-dark-card: #0a1428; /* Azul escuro ligeiramente diferente para cartões */
+    --text-muted: #a0aec0;   /* Cor de texto secundário */
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- CLASSE PARA SEÇÕES DE TELA INTEIRA (CRÍTICO) --- */
+.fullscreen-section {
+    min-height: 100vh;      /* Ocupa pelo menos a altura total da janela de visualização */
+    display: flex;          /* Facilita o centralização vertical do conteúdo */
+    align-items: center;    /* Centraliza o conteúdo verticalmente */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente (se necessário) */
+    padding-top: 10px;     /* Espaço para o cabeçalho fixo */
+    padding-bottom: 150px;
+}
+
+/* Títulos de Seção */
+.section-title {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 50px;
+    text-align: center;
+    font-weight: 700;
+}
+
+/* Botões */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--blue-highlight);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid var(--blue-highlight);
+    color: var(--blue-highlight);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+/* --- Cabeçalho & Navegação (Fixo e Transparente sobre o Escuro) --- */
+.header {
+    background-color: rgba(5, 10, 20, 0.95); /* Semi-transparente */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Linha divisória sutil */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.nav-menu {
+    display: flex;
+}
+
+.nav-item {
+    margin-left: 30px;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.nav-link:hover {
+    color: var(--blue-highlight);
+}
+
+/* --- Seção Hero --- */
+.hero {
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 4.5rem;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.hero-title span {
+    color: var(--blue-highlight);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    color: var(--text-muted);
+}
+
+.hero-cta {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* --- Seção Tecnologias (ESTILIZAÇÃO COM ÍCONES ESPECÍFICOS) --- */
+.tech-section {
+    background-color: var(--blue-dark-card); /* Fundo ligeiramente diferente para destaque */
+}
+
+/*.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    width: 100%; /* Ocupa largura total para alinhamento em tela cheia
+}*/
+
+/* --- Estilos para Seção de Tecnologias/Habilidades --- */
+
+.tech-grid {
+    display: grid;
+    /* CRÍTICO: Cria 3 colunas iguais e se ajusta para 2 ou 1 em telas menores */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px; /* Espaço entre as caixas */
+    justify-content: center; /* Centraliza a grid na página */
+    max-width: 900px; /* Largura máxima para a grid não esticar demais */
+    margin: 0 auto; /* Centraliza a grid horizontalmente */
+}
+
+/* Opcional: Se você quiser forçar exatamente 3 colunas sempre (não recomendado para mobile) */
+/*
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+*/
+
+/*.tech-card {
+    background-color: rgba(255, 255, 255, 0.03); /* Fundo de cartão sutilmente visível no escuro 
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05); /* Borda muito sutil 
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}*/
+
+/*.tech-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(0, 123, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra mais forte no escuro 
+}*/
+
+.tech-card {
+    background-color: var(--blue-dark-card);
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    /* Opcional: Adiciona um brilho sutil ao passar o mouse */
+}
+
+.tech-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 123, 255, 0.3);
+    border-color: rgba(0, 123, 255, 0.5);
+}
+
+/* --- ESTILIZAÇÃO PARA AS IMAGENS DE ÍCONE --- */
+.tech-icon-img {
+    height: 60px; /* Altura fixa para alinhar todos */
+    width: auto;   /* Mantém a proporção */
+    object-fit: contain; /* Garante que toda a imagem caiba */
+    display: block; /* Remove espaços em branco indesejados */
+}
+
+.tech-name {
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* --- Seção Projetos --- */
+/* (Mantenha o padrão da tech-grid para consistência) */
+/*.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    width: 100%;
+}*/
+
+.projects-grid {
+    display: grid;
+    /* CRÍTICO: Cria 3 colunas iguais para os projetos */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px; /* Espaço maior entre projetos */
+    width: 100%;
+    max-width: 1100px; /* Largura máxima ligeiramente maior para projetos */
+    margin: 0 auto;
+}
+
+.project-card {
+    background-color: rgba(255, 255, 255, 0.02);
+    padding: 35px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Garante que o link fique no fundo */
+    height: 100%; /* Cartões com a mesma altura */
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.04);
+}
+
+.project-title {
+    font-size: 1.6rem;
+    color: var(--blue-highlight);
+    margin-bottom: 15px;
+}
+
+.project-description {
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.project-techs {
+    font-size: 0.95rem;
+    color: #888;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+.project-link {
+    color: #fff;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+}
+
+.project-link:hover {
+    color: var(--blue-highlight);
+    border-bottom: 1px solid var(--blue-highlight);
+}
+
+/* --- Seção Contato --- */
+.contact-text {
+    font-size: 1.3rem;
+    color: var(--text-muted);
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.contact-links-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap; /* Responsividade para os cartões de contato */
+}
+
+/* Estilo para cartões de contato usando os ícones */
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #0a1428;
+    padding: 20px 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.contact-card:hover {
+    background-color: var(--blue-highlight);
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* --- Rodapé --- */
+.footer {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #888;
+    padding: 40px 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* --- Media Queries (Responsividade) --- */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; /* Simplificando para mobile, esconde o menu */
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .fullscreen-section {
+        padding-top: 80px; /* Reduz espaço do header */
+    }
+
+    /* --- FUNDO DE PARTÍCULAS --- */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #050a14; /* O azul profundo que escolhemos */
+    z-index: -1; /* Fica atrás de todo o conteúdo */
+    top: 0;
+    left: 0;
+}
+
+#particles-js canvas {
+    display: block;
+    vertical-align: bottom;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* --- CORREÇÃO DE RESPONSIVIDADE (GRIDS) --- */
+
+.tech-grid, .projects-grid {
+    display: grid;
+    /* O segredo: auto-fill com minmax impede que os itens quebrem o layout */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Ajuste específico para as Habilidades (Tech Cards) */
+.tech-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+/* Faz com que em telas muito pequenas (Mobile) as seções não fiquem apertadas */
+@media (max-width: 600px) {
+    .fullscreen-section {
+        padding: 80px 10px;
+        height: auto; /* Em mobile, melhor deixar o conteúdo fluir do que forçar 100vh */
+        min-height: 100vh;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+/* Garante que os cards não fiquem "gigantes" em telas muito largas */
+.tech-card, .project-card {
+    max-width: 100%;
+}
+}
