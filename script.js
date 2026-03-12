@@ -21,7 +21,7 @@
         "random": false,
         "straight": false,
         "out_mode": "out",
-        "bounce": false,
+        "bounce": false, 
         }
     },
     "interactivity": {

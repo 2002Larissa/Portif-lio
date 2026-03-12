@@ -230,7 +230,6 @@ img {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    /* Opcional: Adiciona um brilho sutil ao passar o mouse */
 }
 
 .tech-card:hover {
