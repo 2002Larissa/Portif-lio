@@ -1,7 +1,7 @@
-🚀 Meu Portfólio de Desenvolvedora Back-end
-Este é o meu portfólio pessoal, projetado para apresentar meus projetos, habilidades técnicas e facilitar o contato para oportunidades de colaboração no ecossistema Back-end.
+<h1>🚀 Meu Portfólio de Desenvolvedora Back-end<h1>
+<p>Este é o meu portfólio pessoal, projetado para apresentar meus projetos, habilidades técnicas e facilitar o contato para oportunidades de colaboração no ecossistema Back-end.</p>
 
-🎨 Sobre o Design
+<h2>🎨 Sobre o Design<h2>
 O projeto foi construído com uma estética Deep Blue, focada em uma experiência imersiva e moderna.
 
 Seções Full-Screen: Navegação fluida onde cada seção ocupa 100% da tela do usuário.
