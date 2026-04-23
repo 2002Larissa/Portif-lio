@@ -1,10 +1,9 @@
 <div align="center">
-  <img src="images/nodejs.png" width="80" alt="Logo Tech">
-  <h1>🚀 Portfólio Back-end: Arquitetura e Soluções</h1>
+  <h1>🚀 Portfólio: Arquitetura e Soluções</h1>
   
   <p>
     <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-007bff?style=for-the-badge" alt="Status">
-    <img src="https://img.shields.io/badge/Stack-Node%20%7C%20Java%20%7C%20Docker-6f42c1?style=for-the-badge" alt="Stack">
+    <img src="https://img.shields.io/badge/Stack-JavaScript%20%7C%20HTML%20%7C%20CSS-6f42c1?style=for-the-badge" alt="Stack">
   </p>
   
   <p align="center">
@@ -26,21 +25,6 @@
 </ul>
 
 <hr>
-
-<h2>🛠️ Stack Tecnológica</h2>
-
-<table width="100%">
-  <tr>
-    <td width="33%" align="center"><b>Linguagens & Runtime</b></td>
-    <td width="33%" align="center"><b>Infraestrutura</b></td>
-    <td width="33%" align="center"><b>Versionamento</b></td>
-  </tr>
-  <tr>
-    <td align="center">Node.js, Java, JavaScript</td>
-    <td align="center">Docker, SQL/NoSQL</td>
-    <td align="center">Git, GitHub Actions</td>
-  </tr>
-</table>
 
 <br>
 
@@ -74,13 +58,13 @@ PORTIFÓLIO/
   <h2>📫 Vamos nos conectar?</h2>
   <p>Estou sempre em busca de novos desafios e colaborações técnicas.</p>
   
-  <a href="https://linkedin.com/in/seu-perfil">
+  <a href="https://linkedin.com/in/larissa-santos">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
   </a>
-  <a href="https://github.com/seu-usuario">
+  <a href="https://github.com/2002Larissa">
     <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
   </a>
-  <a href="mailto:seu-email@gmail.com">
+  <a href="mailto:larissadssantos1515@gmail.com">
     <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
   </a>
   
